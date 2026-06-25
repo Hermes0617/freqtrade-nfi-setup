@@ -17,6 +17,17 @@ VPS'te 40 pair analiz 284 saniye sürüyordu (çok yavaş). PC'de daha hızlı o
 
 ```powershell
 cd C:\
+
+### NFI Güncelleme Takibi
+```powershell
+# Günlük kontrol görevi oluştur (yönetici olarak):
+$action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -WindowStyle Hidden -File C:\freqtrade-nfi-setup\nfi-check.ps1"
+$trigger = New-ScheduledTaskTrigger -Daily -At "09:00"
+Register-ScheduledTask -TaskName "NFI Check" -Action $action -Trigger $trigger -Description "NFI strateji güncelleme kontrolü"
+
+# Sonucu görmek için:
+Get-Content C:\freqtrade-nfi-setup\nfi_last_commit.txt
+```
 git clone https://github.com/Hermes0617/freqtrade-nfi-setup.git
 cd freqtrade-nfi-setup
 ```
