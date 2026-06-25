@@ -1,0 +1,67 @@
+{
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "max_open_trades": 6,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "timeframe": "5m",
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": true,
+    "position_adjustment_enable": true,
+    "force_entry_enable": true,
+    "grinding_enable": true,
+    "internals": {
+        "process_throttle_secs": 5
+    },
+    "unfilledtimeout": {
+        "entry": 3,
+        "exit": 2,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "limit",
+        "force_entry": "limit",
+        "force_exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "pair_whitelist": [
+            "AAVE/USDT","ADA/USDT","ALGO/USDT","APT/USDT",
+            "ARB/USDT","ATOM/USDT","AVAX/USDT","BCH/USDT","BONK/USDT",
+            "CHR/USDT","CKB/USDT","COMP/USDT","CRV/USDT",
+            "DASH/USDT","DOGE/USDT","DOT/USDT","ENA/USDT","ETC/USDT",
+            "FET/USDT","FIL/USDT","GALA/USDT","GRT/USDT",
+            "HBAR/USDT","ICP/USDT","IMX/USDT","INJ/USDT","JUP/USDT",
+            "KSM/USDT","LDO/USDT","LINK/USDT","LTC/USDT","MKR/USDT",
+            "NEAR/USDT","NEO/USDT","ONDO/USDT","ONE/USDT","ONT/USDT",
+            "OP/USDT","PENGU/USDT","PEPE/USDT","POL/USDT","QNT/USDT",
+            "RAY/USDT","RENDER/USDT","ROSE/USDT","SEI/USDT","SHIB/USDT",
+            "SNX/USDT","SOL/USDT","STX/USDT","SUI/USDT","SUSHI/USDT",
+            "SXP/USDT","TAO/USDT","TIA/USDT","TON/USDT","TRX/USDT",
+            "UMA/USDT","UNI/USDT","VET/USDT","VIRTUAL/USDT","WIF/USDT",
+            "WLD/USDT","XLM/USDT","XRP/USDT","XTZ/USDT","ZEC/USDT"
+        ],
+        "pair_blacklist": [
+            "BNB/.*", "ETH/.*", "BTC/.*",
+            ".*_BEAR/.*", ".*_BULL/.*", ".*_UP/.*", ".*_DOWN/.*",
+            ".*_PREMIUM/.*", ".*_HALF/.*", ".*_HEDGE/.*", ".*[1235][SL]/.*",
+            ".*STOCK/.*"
+        ],
+        "ccxt_config": {"enableRateLimit": true, "rateLimit": 200},
+        "ccxt_async_config": {"enableRateLimit": true, "rateLimit": 200}
+    },
+    "pairlists": [
+        {"method": "StaticPairList"}
+    ],
+    "timerange": "20250601-20260626",
+    "bot_name": "NFIX_BB_RPB_BT"
+}
