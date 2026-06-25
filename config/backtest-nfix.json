@@ -72,6 +72,9 @@
         "ccxt_config": {"enableRateLimit": true, "rateLimit": 200},
         "ccxt_async_config": {"enableRateLimit": true, "rateLimit": 200}
     },
+    "buy_params": {
+        "max_slip": 0.668
+    },
     "pairlists": [
         {"method": "StaticPairList"}
     ],
