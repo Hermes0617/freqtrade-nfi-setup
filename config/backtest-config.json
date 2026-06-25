@@ -12,13 +12,8 @@
     "ignore_roi_if_entry_signal": true,
     "position_adjustment_enable": true,
     "grinding_enable": true,
-    "cancel_open_orders_on_exit": false,
-    "internals": {
-        "process_throttle_secs": 10
-    },
-    "unfilledtimeout": {
-        "entry": 3, "exit": 2, "exit_timeout_count": 0, "unit": "minutes"
-    },
+    "internals": {"process_throttle_secs": 5},
+    "unfilledtimeout": {"entry": 3, "exit": 2, "exit_timeout_count": 0, "unit": "minutes"},
     "order_types": {
         "entry": "limit", "exit": "limit", "emergency_exit": "limit",
         "force_entry": "limit", "force_exit": "limit",
@@ -46,30 +41,11 @@
             "UMA/USDT","UNI/USDT","VET/USDT","VIRTUAL/USDT","WIF/USDT",
             "WLD/USDT","XLM/USDT","XRP/USDT","XTZ/USDT","ZEC/USDT"
         ],
-        "pair_blacklist": [
-            "BNB/.*","ETH/.*","BTC/.*",
-            ".*_BEAR/.*",".*_BULL/.*",".*_UP/.*",".*_DOWN/.*",
-            ".*_PREMIUM/.*",".*_HALF/.*",".*_HEDGE/.*",
-            ".*[1235][SL]/.*",".*STOCK/.*","OMNI/.*"
-        ],
+        "pair_blacklist": ["BNB/.*","ETH/.*","BTC/.*",".*_BEAR/.*",".*_BULL/.*",".*_UP/.*",".*_DOWN/.*",".*_PREMIUM/.*",".*_HALF/.*",".*_HEDGE/.*",".*[1235][SL]/.*",".*STOCK/.*","OMNI/.*"],
         "ccxt_config": {"enableRateLimit": true, "rateLimit": 200},
         "ccxt_async_config": {"enableRateLimit": true, "rateLimit": 200}
     },
-    "pairlists": [
-        {"method": "StaticPairList"},
-        {"method": "FullTradesFilter"},
-        {"method": "SpreadFilter", "max_spread_ratio": 0.005},
-        {"method": "VolumePairList", "number_assets": 80, "sort_key": "quoteVolume"}
-    ],
-    "api_server": {
-        "enabled": true,
-        "listen_ip_address": "0.0.0.0",
-        "listen_port": 8080,
-        "jwt_secret_key": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6a7b8c9d0e1f2a3b4c5d6a7b8c9d0",
-        "ws_token": "nfi-pc-ws-2026",
-        "username": "admin",
-        "password": "Mahir.0617"
-    },
-    "bot_name": "NFI_PC_70",
+    "pairlists": [{"method": "StaticPairList"}],
+    "bot_name": "NFI_Backtest_1Y",
     "strategy": "NostalgiaForInfinityX6"
 }
