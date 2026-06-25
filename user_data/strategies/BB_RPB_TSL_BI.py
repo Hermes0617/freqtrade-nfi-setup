@@ -289,7 +289,7 @@ class BB_RPB_TSL_BI(IStrategy):
     ## Slippage params
 
     is_optimize_slip = False
-    max_slip = DecimalParameter(0.33, 0.80, default=0.33, decimals=3, optimize=is_optimize_slip , load=True)
+    max_slip = 0.33
 
     ## Sell params
 
