@@ -1,0 +1,66 @@
+{
+    "max_open_trades": 6,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "timeframe": "5m",
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "liquidation_buffer": 0.05,
+    "force_entry_enable": true,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": true,
+    "position_adjustment_enable": true,
+    "grinding_enable": true,
+    "cancel_open_orders_on_exit": false,
+    "internals": {"process_throttle_secs": 5},
+    "unfilledtimeout": {"entry": 3, "exit": 2, "exit_timeout_count": 0, "unit": "minutes"},
+    "order_types": {
+        "entry": "limit", "exit": "limit", "emergency_exit": "market",
+        "force_entry": "limit", "force_exit": "limit",
+        "stoploss": "market", "stoploss_on_exchange": true,
+        "stoploss_on_exchange_interval": 60,
+        "stoploss_on_exchange_limit_ratio": 0.99
+    },
+    "entry_pricing": {"price_side": "other", "use_order_book": false, "order_book_top": 1, "price_last_balance": 0, "check_depth_of_market": {"enabled": false, "bids_to_ask_delta": 1}},
+    "exit_pricing": {"price_side": "other", "use_order_book": false, "order_book_top": 1, "price_last_balance": 0},
+    "exchange": {
+        "name": "binance",
+        "key": "", "secret": "",
+        "pair_whitelist": [
+            "A/USDT:USDT","AAVE/USDT:USDT","ADA/USDT:USDT","ALGO/USDT:USDT","APT/USDT:USDT",
+            "ARB/USDT:USDT","ATOM/USDT:USDT","AVAX/USDT:USDT","BCH/USDT:USDT","BONK/USDT:USDT",
+            "BTC/USDT:USDT","CHR/USDT:USDT","CKB/USDT:USDT","COMP/USDT:USDT","CRV/USDT:USDT",
+            "DASH/USDT:USDT","DOGE/USDT:USDT","DOT/USDT:USDT","ENA/USDT:USDT","ETC/USDT:USDT",
+            "ETH/USDT:USDT","FET/USDT:USDT","FIL/USDT:USDT","GALA/USDT:USDT","GRT/USDT:USDT",
+            "HBAR/USDT:USDT","ICP/USDT:USDT","IMX/USDT:USDT","INJ/USDT:USDT","JUP/USDT:USDT",
+            "KSM/USDT:USDT","LDO/USDT:USDT","LINK/USDT:USDT","LTC/USDT:USDT","MKR/USDT:USDT",
+            "NEAR/USDT:USDT","NEO/USDT:USDT","ONDO/USDT:USDT","ONE/USDT:USDT","ONT/USDT:USDT",
+            "OP/USDT:USDT","PENGU/USDT:USDT","PEPE/USDT:USDT","POL/USDT:USDT","QNT/USDT:USDT",
+            "RAY/USDT:USDT","RENDER/USDT:USDT","ROSE/USDT:USDT","SEI/USDT:USDT","SHIB/USDT:USDT",
+            "SNX/USDT:USDT","SOL/USDT:USDT","STX/USDT:USDT","SUI/USDT:USDT","SUSHI/USDT:USDT",
+            "SXP/USDT:USDT","TAO/USDT:USDT","TIA/USDT:USDT","TON/USDT:USDT","TRX/USDT:USDT",
+            "UMA/USDT:USDT","UNI/USDT:USDT","VET/USDT:USDT","VIRTUAL/USDT:USDT","WIF/USDT:USDT",
+            "WLD/USDT:USDT","XLM/USDT:USDT","XRP/USDT:USDT","XTZ/USDT:USDT","ZEC/USDT:USDT"
+        ],
+        "pair_blacklist": [
+            "BNB/USDT:USDT","ETH/USDT:USDT","BTC/USDT:USDT",
+            ".*_BEAR/.*",".*_BULL/.*",".*_UP/.*",".*_DOWN/.*",
+            ".*_PREMIUM/.*",".*_HALF/.*",".*_HEDGE/.*",
+            ".*[1235][SL]/.*",".*STOCK/.*","OMNI/.*"
+        ],
+        "ccxt_config": {"enableRateLimit": true, "rateLimit": 200, "options": {"defaultType": "future"}},
+        "ccxt_async_config": {"enableRateLimit": true, "rateLimit": 200, "options": {"defaultType": "future"}}
+    },
+    "pairlists": [
+        {"method": "StaticPairList"},
+        {"method": "FullTradesFilter"},
+        {"method": "SpreadFilter", "max_spread_ratio": 0.005},
+        {"method": "VolumePairList", "number_assets": 80, "sort_key": "quoteVolume"}
+    ],
+    "bot_name": "NFI_X7_3x",
+    "strategy": "NostalgiaForInfinityX7"
+}
