@@ -50,18 +50,11 @@
         "pair_whitelist": [
             "AAVE/USDT","ADA/USDT","ALGO/USDT","APT/USDT",
             "ARB/USDT","ATOM/USDT","AVAX/USDT","BCH/USDT","BONK/USDT",
-            "CHR/USDT","CKB/USDT","COMP/USDT","CRV/USDT",
-            "DASH/USDT","DOGE/USDT","DOT/USDT","ENA/USDT","ETC/USDT",
+            "CHR/USDT","DOGE/USDT","DOT/USDT","ENA/USDT",
             "FET/USDT","FIL/USDT","GALA/USDT","GRT/USDT",
-            "HBAR/USDT","ICP/USDT","IMX/USDT","INJ/USDT","JUP/USDT",
-            "KSM/USDT","LDO/USDT","LINK/USDT","LTC/USDT","MKR/USDT",
-            "NEAR/USDT","NEO/USDT","ONDO/USDT","ONE/USDT","ONT/USDT",
-            "OP/USDT","PENGU/USDT","PEPE/USDT","POL/USDT","QNT/USDT",
-            "RAY/USDT","RENDER/USDT","ROSE/USDT","SEI/USDT","SHIB/USDT",
-            "SNX/USDT","SOL/USDT","STX/USDT","SUI/USDT","SUSHI/USDT",
-            "SXP/USDT","TAO/USDT","TIA/USDT","TON/USDT","TRX/USDT",
-            "UMA/USDT","UNI/USDT","VET/USDT","VIRTUAL/USDT","WIF/USDT",
-            "WLD/USDT","XLM/USDT","XRP/USDT","XTZ/USDT","ZEC/USDT"
+            "HBAR/USDT","ICP/USDT","INJ/USDT","JUP/USDT",
+            "LINK/USDT","LTC/USDT","NEAR/USDT","OP/USDT",
+            "PEPE/USDT","SOL/USDT","SUI/USDT","UNI/USDT"
         ],
         "pair_blacklist": [
             "BNB/.*", "ETH/.*", "BTC/.*",
@@ -79,7 +72,7 @@
     "hyperopt_random_state": 42,
     "spaces": ["roi", "stoploss"],
     "stoploss_range": [-0.05, -0.01, -0.01],
-    "epochs": 500,
+    "epochs": 300,
     "min_trades": 10,
     "timerange": "20250901-20260626",
     "bot_name": "NFI_X7_Hyperopt"
