@@ -1,0 +1,98 @@
+{
+    "max_open_trades": 6,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "timeframe": "5m",
+    "force_entry_enable": true,
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": true,
+    "position_adjustment_enable": true,
+    "grinding_enable": true,
+    "cancel_open_orders_on_exit": false,
+    "internals": {
+        "process_throttle_secs": 10
+    },
+    "unfilledtimeout": {
+        "entry": 3,
+        "exit": 2,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "limit",
+        "force_entry": "limit",
+        "force_exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60,
+        "stoploss_on_exchange_limit_ratio": 0.99
+    },
+    "entry_pricing": {
+        "price_side": "other",
+        "use_order_book": false,
+        "order_book_top": 1,
+        "price_last_balance": 0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "other",
+        "use_order_book": false,
+        "order_book_top": 1,
+        "price_last_balance": 0
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "pair_whitelist": [
+            "ADA/USDT","ALGO/USDT","APT/USDT","ARB/USDT","ATOM/USDT",
+            "AVAX/USDT","BCH/USDT","BTC/USDT","COMP/USDT","CRV/USDT",
+            "DASH/USDT","DOGE/USDT","DOT/USDT","ETC/USDT","ETH/USDT",
+            "FET/USDT","FIL/USDT","GALA/USDT","GRT/USDT","HBAR/USDT",
+            "ICP/USDT","IMX/USDT","INJ/USDT","LINK/USDT","LTC/USDT",
+            "MKR/USDT","NEAR/USDT","OP/USDT","PEPE/USDT","QNT/USDT",
+            "RENDER/USDT","SEI/USDT","SHIB/USDT","SOL/USDT","SUI/USDT",
+            "TAO/USDT","TON/USDT","TRX/USDT","UNI/USDT","XRP/USDT"
+        ],
+        "pair_blacklist": [
+            "BNB/.*","ETH/.*","BTC/.*",
+            ".*_BEAR/.*",".*_BULL/.*",".*_UP/.*",".*_DOWN/.*",
+            ".*_PREMIUM/.*",".*_HALF/.*",".*_HEDGE/.*",
+            ".*[1235][SL]/.*",".*STOCK/.*","MKR/.*","OMNI/.*"
+        ],
+        "ccxt_config": {
+            "enableRateLimit": true,
+            "rateLimit": 200
+        },
+        "ccxt_async_config": {
+            "enableRateLimit": true,
+            "rateLimit": 200
+        }
+    },
+    "pairlists": [
+        {"method": "StaticPairList"},
+        {"method": "FullTradesFilter"},
+        {"method": "SpreadFilter", "max_spread_ratio": 0.005},
+        {"method": "VolumePairList", "number_assets": 40, "sort_key": "quoteVolume"}
+    ],
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "jwt_secret_key": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6a7b8c9d0e1f2a3b4c5d6a7b8c9d0",
+        "ws_token": "nfi-pc-ws-2026",
+        "username": "admin",
+        "password": "Mahir.0617"
+    },
+    "bot_name": "NFI_PC",
+    "strategy": "NostalgiaForInfinityX6"
+}
